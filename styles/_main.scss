@@ -1,0 +1,225 @@
+.body {
+  /* Body styling */
+  min-height: 100vh;
+  width: 100%;
+  background-color: $Light-grayish-cyan;
+  padding: 0.25em;
+
+  /* Logo styling */
+  .logo {
+    text-align: center;
+    padding: 2em;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  /* Tip calculator section styling */
+  .tip-calculator {
+    background-color: $White;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 1.4em 1.4em 0 0;
+    margin: 0 auto;
+
+    /* Label styling */
+    label {
+      color: $Very-dark-cyan;
+      font-weight: 700;
+    }
+
+    /* Input styling */
+    input {
+      border: none;
+      outline: none;
+      padding-right: 0.15em;
+      background-color: $Very-light-grayish-cyan;
+      text-align: right;
+      font-size: 1.5rem;
+      color: $Very-dark-cyan;
+      font-weight: bolder;
+      width: 100%;
+      margin: 0.25em 0 1em 0;
+    }
+
+    /* PartOne section styling */
+    .partOne {
+      /* Bill and people input background image */
+      .bill-input {
+        background-image: url("../images/icon-dollar.svg");
+      }
+      .people-input {
+        background-image: url("../images/icon-person.svg");
+      }
+      .bill-input,
+      .people-input {
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-origin: content-box;
+        padding-left: 0.5em;
+      }
+
+      /* Tip section styling */
+      .tip {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75em;
+        margin-top: 0.75em;
+        margin-bottom: 2em;
+        text-align: center;
+
+        /* Tips styling */
+        .tips {
+          background-color: $Very-dark-cyan;
+          color: $White;
+          height: 2.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.25em;
+          border-radius: 0.25em;
+          cursor: pointer;
+          font-weight: 700;
+        }
+
+        .active-tip {
+          color: $Very-dark-cyan;
+          background-color: $Strong-cyan;
+          font-weight: bolder;
+        }
+
+        /* Custom tip input styling */
+        .tip-custom {
+          margin: 0;
+          padding: 0 1em 0 0;
+          font-size: 1.25rem;
+          height: 2.5em;
+          border-radius: 0.25em;
+          &::placeholder {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      /* Number of people input and error styling */
+      .peopleLabel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .error {
+          font-size: 0.75rem;
+          color: orangered;
+          display: none;
+        }
+      }
+    }
+
+    /* PartTwo section styling */
+    .partTwo {
+      background-color: $Very-dark-cyan;
+      padding: 2em;
+      color: whitesmoke;
+      border-radius: 1em;
+
+      /* Tip amount and total styling */
+      .tip-amount,
+      .total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+      }
+
+      /* Person, amount, and text styling */
+      .person {
+        font-size: 0.9em;
+        color: $Grayish-cyan;
+        font-weight: 700;
+      }
+
+      .amount {
+        font-size: 2em;
+        color: $Strong-cyan;
+        font-weight: 700;
+      }
+
+      .text {
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      /* Reset button styling */
+      .reset {
+        border: none;
+        border-radius: 0.25em;
+        width: 100%;
+        background-color: $Strong-cyan;
+        color: $Very-dark-cyan;
+        padding: 0.5em 0;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+/* Responsive design breakpoints */
+@media (min-width: 48rem) {
+  .body {
+    .tip-calculator {
+      transform: translateY(5rem);
+      width: 90%;
+      flex-direction: row;
+      border-radius: 1em;
+      padding: 1em;
+
+      gap: 1.5em;
+      .partOne {
+        flex: 1.25;
+
+        /* Adjust tip grid for wider screens */
+        .tip {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .partTwo {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        /* Adjust reset button positioning */
+        .reset {
+          margin-top: auto;
+        }
+
+        /* Adjust amount and text font sizes */
+        .amount {
+          font-size: 2.25em;
+        }
+
+        .text {
+          p {
+            font-size: 1.15em;
+          }
+        }
+
+        /* Adjust reset button font size */
+        .reset {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 72rem) {
+  .body {
+    .tip-calculator {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# Frontend Mentor - Tip calculator app solution
+
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Users and add in the bill value and number of people via its respective inputs
+- Users can select tip amounts or type in a custom tip value
+- The tip calculator can generate the tip total and tip per person.
+
+### Screenshot
+
+<img src="./image.png" alt="desktop view" width="400" height="200" />
+<img src="./image-1.png" alt="mobile view" width="150" height="500" />
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- SCSS
+- Javascript

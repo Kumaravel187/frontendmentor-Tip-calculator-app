@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.body {
+  /* Body styling */
+  min-height: 100vh;
+  width: 100%;
+  background-color: hsl(185, 41%, 84%);
+  padding: 0.25em;
+  /* Logo styling */
+  /* Tip calculator section styling */
+}
+.body .logo {
+  text-align: center;
+  padding: 2em;
+}
+.body .logo img {
+  display: block;
+  margin: 0 auto;
+}
+.body .tip-calculator {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: 1.4em 1.4em 0 0;
+  margin: 0 auto;
+  /* Label styling */
+  /* Input styling */
+  /* PartOne section styling */
+  /* PartTwo section styling */
+}
+.body .tip-calculator label {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+.body .tip-calculator input {
+  border: none;
+  outline: none;
+  padding-right: 0.15em;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  font-size: 1.5rem;
+  color: hsl(183, 100%, 15%);
+  font-weight: bolder;
+  width: 100%;
+  margin: 0.25em 0 1em 0;
+}
+.body .tip-calculator .partOne {
+  /* Bill and people input background image */
+  /* Tip section styling */
+  /* Number of people input and error styling */
+}
+.body .tip-calculator .partOne .bill-input {
+  background-image: url("../images/icon-dollar.svg");
+}
+.body .tip-calculator .partOne .people-input {
+  background-image: url("../images/icon-person.svg");
+}
+.body .tip-calculator .partOne .bill-input,
+.body .tip-calculator .partOne .people-input {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-origin: content-box;
+  padding-left: 0.5em;
+}
+.body .tip-calculator .partOne .tip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75em;
+  margin-top: 0.75em;
+  margin-bottom: 2em;
+  text-align: center;
+  /* Tips styling */
+  /* Custom tip input styling */
+}
+.body .tip-calculator .partOne .tip .tips {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-weight: 700;
+}
+.body .tip-calculator .partOne .tip .active-tip {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  font-weight: bolder;
+}
+.body .tip-calculator .partOne .tip .tip-custom {
+  margin: 0;
+  padding: 0 1em 0 0;
+  font-size: 1.25rem;
+  height: 2.5em;
+  border-radius: 0.25em;
+}
+.body .tip-calculator .partOne .tip .tip-custom::-moz-placeholder {
+  font-size: 1.25rem;
+}
+.body .tip-calculator .partOne .tip .tip-custom::placeholder {
+  font-size: 1.25rem;
+}
+.body .tip-calculator .partOne .peopleLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .tip-calculator .partOne .peopleLabel .error {
+  font-size: 0.75rem;
+  color: orangered;
+  display: none;
+}
+.body .tip-calculator .partTwo {
+  background-color: hsl(183, 100%, 15%);
+  padding: 2em;
+  color: whitesmoke;
+  border-radius: 1em;
+  /* Tip amount and total styling */
+  /* Person, amount, and text styling */
+  /* Reset button styling */
+}
+.body .tip-calculator .partTwo .tip-amount,
+.body .tip-calculator .partTwo .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.body .tip-calculator .partTwo .person {
+  font-size: 0.9em;
+  color: hsl(184, 14%, 56%);
+  font-weight: 700;
+}
+.body .tip-calculator .partTwo .amount {
+  font-size: 2em;
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+.body .tip-calculator .partTwo .text p {
+  font-size: 0.9em;
+}
+.body .tip-calculator .partTwo .reset {
+  border: none;
+  border-radius: 0.25em;
+  width: 100%;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  padding: 0.5em 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Responsive design breakpoints */
+@media (min-width: 48rem) {
+  .body .tip-calculator {
+    transform: translateY(5rem);
+    width: 90%;
+    flex-direction: row;
+    border-radius: 1em;
+    padding: 1em;
+    gap: 1.5em;
+  }
+  .body .tip-calculator .partOne {
+    flex: 1.25;
+    /* Adjust tip grid for wider screens */
+  }
+  .body .tip-calculator .partOne .tip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .body .tip-calculator .partTwo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* Adjust reset button positioning */
+    /* Adjust amount and text font sizes */
+    /* Adjust reset button font size */
+  }
+  .body .tip-calculator .partTwo .reset {
+    margin-top: auto;
+  }
+  .body .tip-calculator .partTwo .amount {
+    font-size: 2.25em;
+  }
+  .body .tip-calculator .partTwo .text p {
+    font-size: 1.15em;
+  }
+  .body .tip-calculator .partTwo .reset {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 72rem) {
+  .body .tip-calculator {
+    width: 50%;
+  }
+}/*# sourceMappingURL=styles.css.map */
